@@ -47,7 +47,10 @@
 
 <li>
   <label>
-    <input type="checkbox" bind:checked={todo.done} />
+    <input
+      data-testid="todo-checkbox"
+      type="checkbox"
+      bind:checked={todo.done} />
     {todo.done ? '✅' : '⭕️'}
   </label>
   <input
