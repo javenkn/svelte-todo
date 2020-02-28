@@ -1,6 +1,5 @@
-import { render, fireEvent, getByText } from '@testing-library/svelte';
+import { render, fireEvent } from '@testing-library/svelte';
 import TodoList from '../components/TodoList.svelte';
-import Todo from '../components/Todo.svelte';
 
 test('todo list renders nothing', () => {
   const { getByTestId } = render(TodoList);
