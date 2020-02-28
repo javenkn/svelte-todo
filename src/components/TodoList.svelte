@@ -5,7 +5,7 @@
   const ENTER_KEY = 13;
   let filter = "all";
   let newTodo = "";
-  let todos = [];
+  export let todos = [];
 
   const updateView = () => {
     filter = "all";
@@ -68,10 +68,10 @@
   }
 </style>
 
-<form on:submit|preventDefault={addTodo}>
+<form on:submit|preventDefault={addTodo} data-testid="todo-form">
   <input bind:value={newTodo} placeholder="What needs to be done?" />
 </form>
-<ul>
+<ul data-testid="todo-list">
   {#each filteredTodos as td, index (td.id)}
     <Todo todo={td} {index} {handleEdit} {deleteTodo} {submit} />
   {/each}

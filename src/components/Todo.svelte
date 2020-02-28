@@ -56,6 +56,7 @@
     value={todo.text}
     placeholder="What needs to be done?"
     on:keydown={handleEdit}
-    on:blur={e => submit(e, index)} />
+    on:blur={e => submit(e, index)}
+    data-testid="todo-text" />
   <button on:click={() => deleteTodo(todo.id)}>🗑</button>
 </li>
