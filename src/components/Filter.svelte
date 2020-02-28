@@ -1,5 +1,5 @@
 <script>
-  export let filter;
+  export let filter = "all";
 </script>
 
 <style>
